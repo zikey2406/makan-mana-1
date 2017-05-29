@@ -42,7 +42,7 @@ function drawText(deg, text) {
     ctx.rotate(deg2rad(deg));
     ctx.textAlign = "right";
     ctx.fillStyle = "#fff";
-    ctx.font = 'bold 30px sans-serif';
+    ctx.font = 'bold 25px sans-serif';
     ctx.fillText(text, 130, 10);
     ctx.restore();
 }
@@ -83,6 +83,17 @@ function drawImg() {
     window.requestAnimationFrame( anim );
 }());
 
+
 document.getElementById("spin").addEventListener("mousedown", function(){
     isStopped = true;
 }, false);
+
+
+document.getElementById("startitnow").addEventListener("mousedown", function(){
+    isStopped = false;
+    anim();
+
+}, true);
+
+
+

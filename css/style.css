@@ -463,3 +463,8 @@ a, a:hover
     width:10%;
     height:10%
 }
+
+#map {
+height: 400px;
+width: 100%;
+}

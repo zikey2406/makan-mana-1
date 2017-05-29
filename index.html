@@ -9,6 +9,8 @@
           content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet'
           type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css"  >
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -83,67 +85,8 @@
                         incididunt ut labore et dolore magna aliqua..</p>
                 </div>
             </div>
-            <div class="col-md-9">
-                <div class="col-md-6 wow fadeInRight delay-02s">
-                    <div class="icon">
-                        <i class="fa fa-paint-brush"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h3 class="txt-tl">Easy to Learn and Design</h3>
-                        <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id
-                            ligula felis euismod semper. </p>
-                    </div>
-                </div>
-                <div class="col-md-6 wow fadeInRight delay-02s">
-                    <div class="icon">
-                        <i class="fa fa-cogs"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h3 class="txt-tl">Bootstrap 3.3.2</h3>
-                        <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id
-                            ligula felis euismod semper. </p>
-                    </div>
-                </div>
-                <div class="col-md-6 wow fadeInRight delay-04s">
-                    <div class="icon">
-                        <i class="fa fa-mobile"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h3 class="txt-tl">Responsive Design</h3>
-                        <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id
-                            ligula felis euismod semper. </p>
-                    </div>
-                </div>
-                <div class="col-md-6 wow fadeInRight delay-04s">
-                    <div class="icon">
-                        <i class="fa fa-desktop"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h3 class="txt-tl">No Coding, No Shortcodes</h3>
-                        <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id
-                            ligula felis euismod semper. </p>
-                    </div>
-                </div>
-                <div class="col-md-6 wow fadeInRight delay-06s">
-                    <div class="icon">
-                        <i class="fa fa-lightbulb-o"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h3 class="txt-tl">High Coversion</h3>
-                        <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id
-                            ligula felis euismod semper. </p>
-                    </div>
-                </div>
-                <div class="col-md-6 wow fadeInRight delay-06s">
-                    <div class="icon">
-                        <i class="fa fa-clock-o"></i>
-                    </div>
-                    <div class="icon-text">
-                        <h3 class="txt-tl">Save Tons of Time</h3>
-                        <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id
-                            ligula felis euismod semper. </p>
-                    </div>
-                </div>
+            <div class="col-md-9 wow fadeInRight delay-04s">
+                <div id="map" ></div>
             </div>
         </div>
     </div>
@@ -171,7 +114,7 @@
 <section class="section-padding wow fadeInUp delay-02s" id="spinIt">
     <div class="container">
         <div class="row" style="margin-top: 40px">
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-5 col-sm-12">
                 <div class="section-title">
                     <h2 class="head-title">Spin It!</h2>
                     <hr class="botm-line">
@@ -181,16 +124,26 @@
                         <button id="addfod" data-toggle="modal" data-target="#squarespaceModal"
                                 class="btn btn-default">Add or Edit
                         </button>
-                        <button id="start" class="btn btn-default">START</button>
+                        <!-- <button id="start" class="btn btn-default">START</button> -->
+                        <button id="startitnow" class="btn btn-default" onClick="window.location.reload()" >START</button>
 
                         <button id="spin" class="btn btn-warning">STOP!</button>
                     </div>
+
+                    <div id=venues style="float:left;">
+                        <ul/>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-8 col-sm-12">
+            <div class="col-md-7 col-sm-12">
                 <div class="row text-center">
-                    <div id="wheel">
-                        <canvas id="canvas" width="300" height="300"></canvas>
+                    <div id=wheel style="float:left;">
+                        <canvas id=canvas width=450 height=450></canvas>
+                    </div>
+                    <div id=stats>
+                        <div id=counter>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -325,8 +278,7 @@
                             Torino, Italy</p>
                         <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0039 333 12 68 347
                         </p>
-                        <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href=""
-                                                                                                          class="link-dec">hi@yourdomain.com</a>
+                        <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href=""  class="link-dec">hi@yourdomain.com</a>
                         </p>
                     </div>
                 </div>
@@ -371,12 +323,25 @@
 
 
 <!-- JS -->
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
+<script src=js/1.js></script>
+<script src="js/jquery.min_2.js"</script>
+<script src="js/jquery.tinysort.min.js"></script>
+
+<script src="js/helpers.js">// Helpers</script>    <!-- comment ini to see your previous wheels -->
+
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/custom.js"></script>
-<script src="js/spinwheel.js"></script>
+
+<!-- <script src="js/spinwheel.js"></script>       comment ini to see the other wheels-->
+
+<script type="text/javascript" src=js/2.js></script>
+
+<!-- for google map api stuff -->
+<script type="text/javascript" src=js/maps.js></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWLxRISZffZwlKP47LZQlr1bvZGKfiXwA&libraries=places&callback=initMap">
+</script>
 
 </body>
 </html>
