@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet'
           type='text/css'>
 
-    <link rel="stylesheet" type="text/css" href="css/reset.css"  >
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -66,14 +66,15 @@
         <div class="row">
             <div class="cta-info text-center">
                 <h3><span class="dec-tec">“</span>Eating now is easy with Makan Mana<span class="dec-tec">”</span> -
-                    Group 7</h3>
+                    MM Team</h3>
             </div>
         </div>
     </div>
 </section>
 
 
-<!-- FEATURES -->
+<!-- SIDE FEATURES -->
+<!-- NEAREST -->
 <section id="feature" class="section-padding">
     <div class="container">
         <div class="row">
@@ -81,29 +82,30 @@
                 <div class="section-title">
                     <h2 class="head-title">Features</h2>
                     <hr class="botm-line">
-                    <p class="sec-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua..</p>
+                    <p class="sec-para">Makan Mana incorporates with Google Maps to bring you better decision making. It shows a number of nearby restaurants, eateries and also diners. It covers a wide range of food cuisine be it Malay Cuisine, Chinese Cuisine and Arabic Cuisine. With Google Maps, user are allowed to take distance and time into consideration without causing any inconvenience.</p>
                 </div>
             </div>
             <div class="col-md-9 wow fadeInRight delay-04s">
-                <div id="map" ></div>
+                <div id="map"></div>
             </div>
         </div>
     </div>
 </section>
-
+<!-- SUGGESTIONS -->
 <section class="section-padding parallax bg-image-2 section wow fadeIn delay-08s" id="cta-2">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <div class="cta-txt">
-                    <h3>Subscribe For Updates</h3>
-                    <p>Join our 1000+ subscribers and get access to the latest tools, freebies, product announcements
-                        and much more!</p>
+                    <h3>Suggestions For Food Name</h3>
+                    <p>Below are the suggestions of food name</p>
                 </div>
             </div>
             <div class="col-md-4 text-center">
-                <a href="#" class="btn btn-submit">Subscribe Now</a>
+                <div class="cta-txt">
+                    <h3>Not interested?</h3>
+                </div>
+                <a href="#spinIt" class="btn btn-submit">Spin Now</a>
             </div>
         </div>
     </div>
@@ -114,109 +116,56 @@
 <section class="section-padding wow fadeInUp delay-02s" id="spinIt">
     <div class="container">
         <div class="row" style="margin-top: 40px">
-            <div class="col-md-5 col-sm-12">
+            <div class="col-md-4 col-sm-12">
                 <div class="section-title">
                     <h2 class="head-title">Spin It!</h2>
                     <hr class="botm-line">
                     <p class="sec-para">Add your choices of places or name of the food to eat.</p>
                     <hr/>
                     <div class="text-center">
-                        <button id="addfod" data-toggle="modal" data-target="#squarespaceModal"
-                                class="btn btn-default">Add or Edit
+                        <button id="addfood2" data-toggle="modal" data-target="#add2"
+                                class="btn btn-default">Add Your Choice
                         </button>
-                        <!-- <button id="start" class="btn btn-default">START</button> -->
-                        <button id="startitnow" class="btn btn-default" onClick="window.location.reload()" >START</button>
+                        <button id="start" class="btn btn-default" onclick="setIsStopped();">START</button>
 
                         <button id="spin" class="btn btn-warning">STOP!</button>
                     </div>
-
-                    <div id=venues style="float:left;">
-                        <ul/>
-                    </div>
                 </div>
             </div>
-            <div class="col-md-7 col-sm-12">
+            <div class="col-md-8 col-sm-12">
                 <div class="row text-center">
-                    <div id=wheel style="float:left;">
-                        <canvas id=canvas width=450 height=450></canvas>
-                    </div>
-                    <div id=stats>
-                        <div id=counter>
-                            
-                        </div>
+                    <div id="wheel">
+                        <canvas id="canvas" width="450" height="450"></canvas>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- MODAL -->
-<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+<div class="modal fade" id="add2" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
                         class="sr-only">Close</span></button>
-                <h3 class="modal-title" id="lineModalLabel">Add places or name of the food to eat</h3>
+                <h3 class="modal-title" id="lineModalLabel2">Add places or name of the food to eat</h3>
             </div>
             <div class="modal-body">
                 <!-- content goes here -->
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="label1">Label 1</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="label1" value="Nasi">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="label2">Label 2</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="label2" value="Mee">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="label3">Label 3</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="label3" value="Sushi">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="label4">Label 4</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="label4" value="Roti">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="label5">Label 5</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="label5" value="Kueh">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="label6">Label 6</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="label6" value="Maggi">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="label7">Label 7</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="label7" value="Buah">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="label8">Label 8</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="label8" value="Sup">
-                        </div>
-                    </div>
+                <form class="form-horizontal" role="form" id="makan-mana-form2">
+                    <div id="buildyourform">
+                        <!--append form here-->
+                    </div> 
+                    <input type="button" value="Add a field" class="add" id="add"/>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="reset" id="delImage" class="btn btn-danger">Reset</button>
-                <button type="button" id="saveImage" class="btn btn-success" data-dismiss="modal" role="button">Save</button>
-
+                <button type="reset" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-success" data-dismiss="modal" role="button"
+                       onclick="setArray(this)"/>
             </div>
         </div>
     </div>
@@ -229,10 +178,10 @@
         <div class="row white">
             <div class="col-md-8 col-sm-12">
                 <div class="section-title">
-                    <h2 class="head-title black">Contact Us</h2>
+                    <h2 class="head-title black">Makan Mana Feedback</h2>
                     <hr class="botm-line">
-                    <p class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua..</p>
+                    <p class="sec-para black">Any feedback of our system? Or you have any error? Please take a moment
+                        and give us your feedback, comment or suggestion.</p>
                 </div>
             </div>
             <div class="col-md-12 col-sm-12">
@@ -272,13 +221,14 @@
 
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <h3 class="cont-title">Visit Us</h3>
+                    <h3 class="cont-title">Contact Us</h3>
                     <div class="location-info">
-                        <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Via Principe Amedeo 9,
-                            Torino, Italy</p>
-                        <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0039 333 12 68 347
+                        <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Faculty of Computing,
+                            UTMJB</p>
+                        <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>+(6)013 488 0418
                         </p>
-                        <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href=""  class="link-dec">hi@yourdomain.com</a>
+                        <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span><a href=""
+                                                                                                   class="link-dec">naadiyah2@live.utm.my</a>
                         </p>
                     </div>
                 </div>
@@ -323,24 +273,23 @@
 
 
 <!-- JS -->
-<script src=js/1.js></script>
-<script src="js/jquery.min_2.js"</script>
-<script src="js/jquery.tinysort.min.js"></script>
-
-<script src="js/helpers.js">// Helpers</script>    <!-- comment ini to see your previous wheels -->
-
-<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/spinwheel.js"></script>       <!-- comment ini to see the other wheels-->
+<!--
+<script src="js/jquery.tinysort.min.js"></script>
+<script src="js/helpers.js">// Helpers</script>
+comment ini to see your previous wheels
+-->
 
-<!-- <script src="js/spinwheel.js"></script>       comment ini to see the other wheels-->
-
-<script type="text/javascript" src=js/2.js></script>
 
 <!-- for google map api stuff -->
 <script type="text/javascript" src=js/maps.js></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWLxRISZffZwlKP47LZQlr1bvZGKfiXwA&libraries=places&callback=initMap">
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWLxRISZffZwlKP47LZQlr1bvZGKfiXwA&libraries=places&callback=initMap">
 </script>
 
 </body>
